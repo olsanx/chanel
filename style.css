@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap');
+
+/*font-family: 'Fraunces', serif;
+font-family: 'Montserrat', sans-serif; */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family:'Montserrat', sans-serif;
+    font-size: 14px;
+    background-color: hsl(30, 38%, 92%);
+    min-width: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    margin: 60px auto; 
+    padding: 0 30px;    
+}
+
+.grid{
+    max-width:600px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color:white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+ .img img{
+    max-width:100%;
+    display: inherit;
+}
+
+
+.card-content{
+    padding: 35px;
+    display: flex;
+    flex-direction: column ;
+    justify-content: space-between;
+}
+
+h6.category{
+    font-family:'Montserrat', sans-serif;  
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: hsl(228, 12%, 48%);
+    font-size: 13px;
+    font-weight: 500;
+}
+
+h1.name{
+    font-family: 'Fraunces', serif;
+    color: hsl(212, 21%, 14%);
+    font-size: 34px;
+    line-height: 1em;
+}
+
+p.description{
+    font-family:'Montserrat', sans-serif; 
+    color: hsl(228, 12%, 48%);
+    line-height: 1.5em;
+}
+
+.price{
+    display: flex;
+    align-items: center;
+}
+
+p.current-price{
+    font-family: 'Fraunces', serif;
+    font-size: 25px;
+    padding-right: 15px;
+    color:hsl(158, 36%, 37%)
+}
+ 
+p.previous-price{ 
+  font-size: ;
+  text-decoration: line-through;
+  
+}   
+
+button.cta{
+   font-family:'Montserrat', sans-serif; 
+   border-radius: 10px;
+    padding: 10px;
+    font-weight: 700;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color .3s ease;
+    background-color:hsl(158, 36%, 37%)
+ }
+
+ button.cta:hover{
+    background-color: hsl(158, 36%, 23%)
+ }
+
+ button.cta img{
+    padding-right: 7px;
+ }
+
+ @media only screen and (max-width: 625px){
+    .grid{
+        grid-template-columns: 1fr;
+    }
+    .img img{
+        max-height:450px;
+        width: 100%;
+        object-fit: cover;
+    }
+    .card-content{
+        display: block;
+    }
+    h6.category, h1.name, p.description, p.current-price, p.previous-price{
+        padding-bottom: 23px;
+    }
+}
+
+ @media only screen and (max-width: 375px){
+    .img img{
+        max-height: 370px;
+        width: 100%;
+    }
+    .container{
+        margin: 20px auto;
+        padding: 0 15px;
+    }
+    .card-content{
+        padding: 30px;
+    }
+     h6.category, h1.name, p.description, p.current-price, p.previous-price{
+        padding-bottom: 20px;
+    }
+
+    h6.category{
+        font-size: 15px;
+    }
+
+    h1.name{
+        font-size: 42px;
+    }
+
+    p.description{
+        font-size: 17px;
+        line-height: 2em;
+    }
+
+    p.current-price{
+        font-size: 35px;
+    }
+
+    p.previous-price{
+        font-size: 14px;
+    }
+
+    button.cta{
+        padding: 20px;
+        font-size: 17px;
+    }
+ }
